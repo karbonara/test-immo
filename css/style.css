@@ -1,0 +1,90 @@
+@font-face {
+    font-family: BebasNeue;
+    src: url(/font/BebasNeue-Bold.woff);
+    src: url(/font/BebasNeue-Regular.woff);
+}
+body {
+    font-family: BebasNeue;
+    font-size: 24px;
+    margin: 0;
+    color: #ffffff;
+    background-image: url('/img/bg.png');
+    background-size: auto;
+}
+.title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 48px;
+}
+.playlist {
+    /* можно было резиновую сетку сделать, но решил сделать через медиа запрос */
+    /* width: 87%; */
+    width: 280px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+.playlist__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+.line-active {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    width: 50%;
+    height: 4px;
+    bottom: 0;
+    background-color: #ff6c00;
+}
+.line {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    background-color: #556270;
+}
+.playlist__item-intro {
+    display: flex;
+    align-items: center;
+}
+.playlist__item-intro img {
+    padding-right: 10px;
+    position: relative;
+}
+.playlist__item-img {
+    position: relative;
+}
+.playlist__item-img-pouse{
+    content: '';
+    z-index: 1000;
+    position: absolute;
+    width: 6px;
+    height: 8px;
+    top: 0;
+    left: 0;
+    background-color: #d6aa17;
+}
+.playlist__item-name {
+    color: #aaaaaa;
+}
+.playlist__item-info p {
+    margin: 0;
+}
+.star-no-active {
+    display: none;
+    position: absolute;
+    right: -20px;
+}
+.block-active {
+    display: block;
+}
+@media (min-width: 768px) {
+    .playlist {
+        width: 660px;
+    }
+}
